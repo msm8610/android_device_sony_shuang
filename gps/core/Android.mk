@@ -30,19 +30,6 @@ LOCAL_CFLAGS += \
 LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/gps.utils
 
-LOCAL_COPY_HEADERS_TO:= libloc_core/
-LOCAL_COPY_HEADERS:= \
-    MsgTask.h \
-    LocApiBase.h \
-    LocAdapterBase.h \
-    ContextBase.h \
-    LocDualContext.h \
-    LBSProxyBase.h \
-    UlpProxyBase.h \
-    gps_extended_c.h \
-    gps_extended.h \
-    loc_core_log.h
-
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)

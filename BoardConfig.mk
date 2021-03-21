@@ -51,6 +51,7 @@ TARGET_KERNEL_CONFIG := shuang_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/boot/custombootimg.mk
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_IMAGE_NAME := shuang
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=23 maxcpus=2 msm_rtb.filter=0x3F ehci-hcd.park=3 msm_rtb.enable=0 lpj=192598 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
@@ -144,12 +145,14 @@ TARGET_OTA_ASSERT_DEVICE := D2004,D2005,D2104,D2105,D2114,falconss,shuang
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
-WITH_CM_CHARGER := true
+WITH_LINEAGE_CHARGER := true
 BLUE_LED_PATH := /sys/class/leds/notification/brightness
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
-# CMHW
-BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/cmhw
+# Lineage Hardware
+BOARD_HARDWARE_CLASS := \
+#$(COMMON_PATH)/lineagehw
+$(DEVICE_PATH)/lineagehw
 
 # FM radio
 TARGET_QCOM_NO_FM_FIRMWARE := true
@@ -159,5 +162,5 @@ TARGET_INIT_VENDOR_LIB := libinit_shuang
 TARGET_RECOVERY_DEVICE_MODULES := libinit_shuang
 
 # SEPolicy
-include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy

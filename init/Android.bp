@@ -1,0 +1,16 @@
+cc_library_static {
+    name: "libinit_shuang",
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init",
+	"system/core"
+    ],
+    cflags: [
+        "-Wall",
+        "-DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"",
+    ],
+    srcs: ["init_shuang.cpp"],
+    whole_static_libs: ["libbase"],
+
+    recovery_available: true,
+}
