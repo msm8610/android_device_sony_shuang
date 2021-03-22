@@ -150,7 +150,9 @@ BLUE_LED_PATH := /sys/class/leds/notification/brightness
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Lineage Hardware
-BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/lineagehw
+BOARD_HARDWARE_CLASS := \
+#$(COMMON_PATH)/lineagehw
+$(DEVICE_PATH)/lineagehw
 
 # FM radio
 TARGET_QCOM_NO_FM_FIRMWARE := true
@@ -160,5 +162,5 @@ TARGET_INIT_VENDOR_LIB := libinit_shuang
 TARGET_RECOVERY_DEVICE_MODULES := libinit_shuang
 
 # SEPolicy
-include device/qcom/sepolicy-legacy/sepolicy.mk
+include device/qcom/sepolicy/legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
