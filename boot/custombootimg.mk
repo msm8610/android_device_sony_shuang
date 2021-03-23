@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-DTBTOOL := $(which dtbToolCM)
+DTBTOOL := dtbToolCM
 INITSONY := $(PRODUCT_OUT)/utilities/init_sony
 
 uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk.cpio
