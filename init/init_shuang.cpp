@@ -50,7 +50,7 @@
 enum { D2004, D2005, D2104, D2105, D2114 };
 
 using android::base::GetProperty;
-using android::init::ImportKernelCmdline;
+using android::init::import_kernel_cmdline;
 
 void property_override(char const prop[], char const value[])
 {
@@ -181,6 +181,7 @@ void vendor_load_properties() {
     };
 
     // Get model just for log
-    device = property_get("ro.product.device","");
-    LOG(INFO) << "Setting build properties for" << device <<  "device";
+    //device = property_get("ro.product.device","");
+    //LOG(INFO) << "Setting build properties for" << device <<  "device";
+    //TODO: fix property_get
 }
