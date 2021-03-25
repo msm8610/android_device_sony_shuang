@@ -38,7 +38,9 @@ PRODUCT_COPY_FILES += \
 
 # Config Files
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    $(DEVICE_PATH)/rootdir/system/etc/audio_policy_configuration_stub.xml:system/etc/audio_policy_configuration_stub.xml \
+    $(DEVICE_PATH)/rootdir/system/etc/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    $(DEVICE_PATH)/rootdir/system/etc/audio_policy_volumes.xml:system/etc/audio_policy_volumes.xml \
     $(DEVICE_PATH)/rootdir/system/etc/firmware/wlan/prima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(DEVICE_PATH)/rootdir/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     $(DEVICE_PATH)/rootdir/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
