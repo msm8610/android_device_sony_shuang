@@ -19,9 +19,6 @@ DEVICE_PATH := device/sony/shuang
 
 TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
-# It's temporary solution... I need to fix mess with recovery.img
-BUILD_BROKEN_DUP_RULES := true
-
 # inherit from the proprietary version
 include vendor/sony/shuang/BoardConfigVendor.mk
 
