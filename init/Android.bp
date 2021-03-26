@@ -13,5 +13,4 @@ cc_library_static {
     srcs: ["init_shuang.cpp"],
     whole_static_libs: ["libbase"],
 
-    recovery_available: true,
 }
